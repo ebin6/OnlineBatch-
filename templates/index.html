@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+    <nav>
+        <ul>
+            {% if user.is_authenticated %}
+                <li><a href="">Logout</a></li>
+            {% endif %}
+        </ul>
+    </nav>
     <h1>StudentManagement System</h1>
     <p>Best Online platform to Learn</p>
 </body>
