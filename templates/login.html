@@ -7,6 +7,9 @@
 </head>
 <body>
     <div>
+        {% for msg in messages %}
+            {{msg}}
+        {% endfor %}
         <h1>Login</h1>
         <form method="post">
             {% csrf_token %}

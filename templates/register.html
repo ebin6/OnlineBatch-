@@ -8,6 +8,10 @@
 <body>
     <div>
         <h1>Register</h1>
+        {% for msg in messages %}
+            {{msg}}
+        {% endfor %}
+        
         <form method="post">
             {% csrf_token %}
             <div>
