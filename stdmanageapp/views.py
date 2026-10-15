@@ -44,3 +44,7 @@ def signIn(request):
             messages.error(request,"Invalid username or password")
             return redirect("login")
     return render(request,"login.html")
+
+def signOut(request):
+    auth.logout(request)
+    return redirect("/")

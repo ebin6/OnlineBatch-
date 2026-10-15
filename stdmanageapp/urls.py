@@ -4,6 +4,7 @@ from stdmanageapp import views
 urlpatterns=[
     path("dashboard/",views.home,name="home"),
     path("register/",views.signUp,name="register"),
+    path("logout/",views.signOut,name="logout"),
     path("",views.signIn,name="login")
 
 ]
