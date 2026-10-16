@@ -39,6 +39,7 @@ def signIn(request):
         print(user)
         if user is not None:
             auth.login(request,user)
+            request.session["username"]=username
             return redirect("home")
         else:
             messages.error(request,"Invalid username or password")
@@ -48,3 +49,6 @@ def signIn(request):
 def signOut(request):
     auth.logout(request)
     return redirect("/")
+
+def courseList(request):
+    return render(request,"course.html")

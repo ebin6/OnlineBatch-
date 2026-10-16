@@ -10,10 +10,12 @@
         <ul>
             {% if user.is_authenticated %}
                 <li><a href="{% url 'logout' %}">Logout</a></li>
+            
             {% endif %}
         </ul>
     </nav>
     <h1>StudentManagement System</h1>
     <p>Best Online platform to Learn</p>
+    {{username}}
 </body>
 </html>
